@@ -1,0 +1,322 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local New = Instance.new("ScreenGui")
+local main = Instance.new("Frame")
+local X = Instance.new("TextButton")
+local Speed = Instance.new("TextButton")
+local Jump = Instance.new("TextButton")
+local infyield = Instance.new("TextButton")
+local LoopmicAimbot = Instance.new("TextButton")
+local dscggsfmarket = Instance.new("TextLabel")
+local Fast = Instance.new("TextButton")
+local Open = Instance.new("TextButton")
+local Advertise = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local TextLabel_2 = Instance.new("TextLabel")
+local TextLabel_3 = Instance.new("TextLabel")
+
+--Properties:
+
+New.Name = "New"
+New.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+main.Name = "main"
+main.Parent = New
+main.BackgroundColor3 = Color3.fromRGB(63, 63, 63)
+main.BorderColor3 = Color3.fromRGB(0, 0, 0)
+main.Position = UDim2.new(0.650951922, 0, 0.0113207651, 0)
+main.Size = UDim2.new(0, 213, 0, 116)
+main.Visible = false
+
+X.Name = "X"
+X.Parent = main
+X.BackgroundColor3 = Color3.fromRGB(83, 83, 83)
+X.BorderColor3 = Color3.fromRGB(0, 0, 0)
+X.Position = UDim2.new(0.896713614, 0, 0, 0)
+X.Size = UDim2.new(0, 22, 0, 21)
+X.Text = "X"
+X.TextColor3 = Color3.fromRGB(255, 0, 0)
+X.TextSize = 14.000
+
+Speed.Name = "Speed"
+Speed.Parent = main
+Speed.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Speed.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Speed.Position = UDim2.new(0.0328638479, 0, 0.275862068, 0)
+Speed.Size = UDim2.new(0, 75, 0, 24)
+Speed.Font = Enum.Font.Cartoon
+Speed.Text = "Speed"
+Speed.TextColor3 = Color3.fromRGB(255, 255, 255)
+Speed.TextSize = 14.000
+Speed.MouseButton1Down:connect(function()
+	-- Script made by Youtube: SoftVortex  Discord: Airsoft#0001
+	-- Enjoy the script
+	local gmt = getrawmetatable(game)
+	setreadonly(gmt,false)
+
+	local oldindex = gmt._index
+	-- Repeats the walkspeed so the games anticheat can't reset the speed to its original speed
+	gmt._index = newcclosure(function(self,k)
+		if k == "WalkSpeed" then
+			return 17
+		end
+		return oldindex(self,k)
+	end)
+	--> Prints meta to make sure script i running well
+	print("meta")
+	--> Hoopz original humanoid speed is 16 so now it does + 2.1 to your walkspeed
+	while true do
+		wait()
+		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 18.1
+	end
+end)
+Jump.Name = "Jump"
+Jump.Parent = main
+Jump.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Jump.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Jump.Position = UDim2.new(0.0328638479, 0, 0.637930989, 0)
+Jump.Size = UDim2.new(0, 75, 0, 24)
+Jump.Font = Enum.Font.Cartoon
+Jump.Text = "Jump Power"
+Jump.TextColor3 = Color3.fromRGB(255, 255, 255)
+Jump.TextSize = 14.000
+Jump.MouseButton1Down:connect(function()
+	-- Script made by Youtube: SoftVortex  Discord: Airsoft#0001
+	-- Enjoy the script
+	local gmt = getrawmetatable(game)
+	setreadonly(gmt,false)
+
+	local oldindex = gmt._index
+	-- Repeats the JumpPower so the games anticheat can't reset the speed to its original speed
+	gmt._index = newcclosure(function(self,k)
+		if k == "JumpPower" then
+			return 20
+		end
+		return oldindex(self,k)
+	end)
+	--> Prints meta to make sure script i running well
+	print("JmuPower")
+	--> Hoopz original humanoid JumpPower is 50 so now it does + whatever value you choose to add to your JumpPower
+	while true do
+		wait()
+		game.Players.LocalPlayer.Character.Humanoid.JumpPower = 70
+	end
+
+end)
+infyield.Name = "inf yield"
+infyield.Parent = main
+infyield.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+infyield.BorderColor3 = Color3.fromRGB(0, 0, 0)
+infyield.Position = UDim2.new(0.619718254, 0, 0.275862038, 0)
+infyield.Size = UDim2.new(0, 75, 0, 24)
+infyield.Font = Enum.Font.Cartoon
+infyield.Text = "inf yield"
+infyield.TextColor3 = Color3.fromRGB(255, 255, 255)
+infyield.TextSize = 14.000
+infyield.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
+end)
+LoopmicAimbot.Name = "Loopmic Aimbot"
+LoopmicAimbot.Parent = main
+LoopmicAimbot.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+LoopmicAimbot.BorderColor3 = Color3.fromRGB(0, 0, 0)
+LoopmicAimbot.Position = UDim2.new(0.619718254, 0, 0.637930989, 0)
+LoopmicAimbot.Size = UDim2.new(0, 75, 0, 24)
+LoopmicAimbot.Font = Enum.Font.Cartoon
+LoopmicAimbot.Text = "Aimbot"
+LoopmicAimbot.TextColor3 = Color3.fromRGB(255, 255, 255)
+LoopmicAimbot.TextSize = 14.000
+LoopmicAimbot.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Loompic/Hoopz-Aimlock/main/Aimlock"))()
+end)
+dscggsfmarket.Name = "dsc.gg/sfmarket"
+dscggsfmarket.Parent = main
+dscggsfmarket.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+dscggsfmarket.BorderColor3 = Color3.fromRGB(0, 0, 0)
+dscggsfmarket.Size = UDim2.new(0, 191, 0, 21)
+dscggsfmarket.Font = Enum.Font.Cartoon
+dscggsfmarket.Text = "dsc.gg/sfmarket"
+dscggsfmarket.TextColor3 = Color3.fromRGB(203, 69, 201)
+dscggsfmarket.TextScaled = true
+dscggsfmarket.TextSize = 14.000
+dscggsfmarket.TextWrapped = true
+
+Fast.Name = "Fast"
+Fast.Parent = main
+Fast.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Fast.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Fast.Position = UDim2.new(0.384976536, 0, 0.49137938, 0)
+Fast.Size = UDim2.new(0, 50, 0, 16)
+Fast.Font = Enum.Font.Cartoon
+Fast.Text = "Fast"
+Fast.TextColor3 = Color3.fromRGB(255, 255, 255)
+Fast.TextSize = 14.000
+Fast.MouseButton1Down:connect(function()
+	-- Script made by Youtube: Mr Curry  Discord: Mr_G_Curry #6982
+	-- Enjoy the script
+	local gmt = getrawmetatable(game)
+	setreadonly(gmt,false)
+
+	local oldindex = gmt._index
+	-- Repeats the walkspeed so the games anticheat can't reset the speed to its original speed
+	gmt._index = newcclosure(function(self,k)
+		if k == "WalkSpeed" then
+			return 20
+		end
+		return oldindex(self,k)
+	end)
+	--> Prints meta to make sure script i running well
+	print("meta")
+	--> Hoopz original humanoid speed is 16 so now it does + 2.1 to your walkspeed
+	while true do
+		wait()
+		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 18.1
+	end
+end)
+Open.Name = "Open"
+Open.Parent = New
+Open.BackgroundColor3 = Color3.fromRGB(53, 53, 53)
+Open.BorderColor3 = Color3.fromRGB(23, 153, 0)
+Open.Position = UDim2.new(0, 0, 0.735849082, 0)
+Open.Size = UDim2.new(0, 66, 0, 29)
+Open.Font = Enum.Font.Creepster
+Open.Text = "Open"
+Open.TextColor3 = Color3.fromRGB(23, 153, 0)
+Open.TextSize = 14.000
+
+Advertise.Name = "Advertise"
+Advertise.Parent = New
+Advertise.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Advertise.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Advertise.Position = UDim2.new(0.897552133, 0, 0.900628924, 0)
+Advertise.Size = UDim2.new(0, 107, 0, 71)
+
+TextLabel.Parent = Advertise
+TextLabel.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.Position = UDim2.new(0, 0, 0.118421055, 0)
+TextLabel.Size = UDim2.new(0, 107, 0, 16)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "Made By Airsoft#0001"
+TextLabel.TextColor3 = Color3.fromRGB(255, 234, 0)
+TextLabel.TextSize = 14.000
+
+TextLabel_2.Parent = Advertise
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_2.Position = UDim2.new(0, 0, 0.34210521, 0)
+TextLabel_2.Size = UDim2.new(0, 107, 0, 23)
+TextLabel_2.Font = Enum.Font.SourceSans
+TextLabel_2.Text = "Join dsc.gg/sfmarket"
+TextLabel_2.TextColor3 = Color3.fromRGB(0, 255, 21)
+TextLabel_2.TextSize = 14.000
+
+TextLabel_3.Parent = Advertise
+TextLabel_3.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_3.Position = UDim2.new(0, 0, 0.631579041, 0)
+TextLabel_3.Size = UDim2.new(0, 107, 0, 17)
+TextLabel_3.Font = Enum.Font.SourceSans
+TextLabel_3.Text = "for scripts & updates"
+TextLabel_3.TextColor3 = Color3.fromRGB(0, 255, 51)
+TextLabel_3.TextSize = 14.000
+
+-- Scripts:
+
+local function YJLAQ_fake_script() -- X.LocalScript 
+	local script = Instance.new('LocalScript', X)
+
+	local Frame = script.Parent.Parent
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		Frame.Visible = false
+	end)
+end
+coroutine.wrap(YJLAQ_fake_script)()
+local function RIPSU_fake_script() -- main.LocalScript 
+	local script = Instance.new('LocalScript', main)
+
+	local UIS = game:GetService('UserInputService')
+	
+	local frame = script.Parent
+	
+	
+	
+	local dragToggle = nil
+	
+	local dragSpeed = 0.25
+	
+	local dragStart = nil
+	
+	local startPos = nil
+	
+	
+	
+	local function updateInput(input)
+	
+		local delta = input.Position - dragStart
+	
+		local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
+	
+			startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+	
+		game:GetService('TweenService'):Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
+	
+	end
+	
+	
+	
+	frame.InputBegan:Connect(function(input)
+	
+		if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then 
+	
+			dragToggle = true
+	
+			dragStart = input.Position
+	
+			startPos = frame.Position
+	
+			input.Changed:Connect(function()
+	
+				if input.UserInputState == Enum.UserInputState.End then
+	
+					dragToggle = false
+	
+				end
+	
+			end)
+	
+		end
+	
+	end)
+	
+	
+	
+	UIS.InputChanged:Connect(function(input)
+	
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+	
+			if dragToggle then
+	
+				updateInput(input)
+	
+			end
+	
+		end
+	
+	end)
+end
+coroutine.wrap(RIPSU_fake_script)()
+local function QRQNGR_fake_script() -- Open.LocalScript 
+	local script = Instance.new('LocalScript', Open)
+
+	local main = script.Parent.Parent.main
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		main.Visible = true
+	end)
+end
+coroutine.wrap(QRQNGR_fake_script)()
